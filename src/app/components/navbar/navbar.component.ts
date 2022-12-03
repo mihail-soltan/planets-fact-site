@@ -25,14 +25,33 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     this.planets = this.dataService.getPlanets();
     // this.planets = this.dataService.getPlanets();
-    console.log(this.planets)
+    console.log(this.planets);
   }
 
   onPlanetClick(planet: any) {
     this.router.navigate([`/planets/${planet}`]);
   }
 
-  checkFunc(e: any){
-    console.log(e.target.checked)
+  getPlanetColor(planet: string) {
+    switch (planet) {
+      case 'Mercury':
+        return '#DEF4FC';
+      case 'Venus':
+        return '#F7CC7F';
+      case 'Earth':
+        return '#545BFE';
+      case 'Mars':
+        return '#FF6A45';
+      case 'Jupiter':
+        return '#ECAD7A';
+      case 'Saturn':
+        return '#FCCB6B';
+      case 'Uranus':
+        return '#65F0D5';
+      case 'Neptune':
+        return '#497EFA';
+      default:
+        return '#DEF4FC';
+    }
   }
 }
