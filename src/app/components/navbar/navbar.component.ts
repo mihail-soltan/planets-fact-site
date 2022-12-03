@@ -31,4 +31,8 @@ export class NavbarComponent implements OnInit {
   onPlanetClick(planet: any) {
     this.router.navigate([`/planets/${planet}`]);
   }
+
+  checkFunc(e: any){
+    console.log(e.target.checked)
+  }
 }

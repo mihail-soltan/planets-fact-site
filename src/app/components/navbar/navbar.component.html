@@ -1,5 +1,19 @@
-<nav>
-  <ul *ngFor="let route of routes">
-    <li><button (click)="onPlanetClick(route)">{{ route }}</button></li>
+<nav class="nav">
+  <a routerLink="/" routerLinkActive="active" class="logo">THE PLANETS</a>
+  <input class="checkbox" type="checkbox" />
+  <div class="hamburger-lines">
+    <span class="line line1"></span>
+    <span class="line line2"></span>
+    <span class="line line3"></span>
+  </div>
+  <ul class="menu">
+    <li *ngFor="let route of routes">
+      <button
+        class="nav-item-{{ route | lowercase }}"
+        (click)="onPlanetClick(route)"
+      >
+        {{ route }}
+      </button>
+    </li>
   </ul>
 </nav>

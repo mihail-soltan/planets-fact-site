@@ -12,7 +12,7 @@ $purple: #6f2ed6;
 $light-red: #D14C32;
 $dark-red: #D83A34;
 $light-blueish-green: #1ec2a4;
-$dark-blue: #2d68f0;
+$darkish-blue: #2d68f0;
 
 // TYPOGRAPHY
 $antonio: 'Antonio', sans-serif;
@@ -27,19 +27,20 @@ $bold: 700;
 
 // FONT SIZES
 
-$smallest-heading: 0.688rem; // 11px
-$small-heading: 0.75rem; // 12px
-$medium-heading: 0.875rem; // 14px
-$large-heading: 2.5rem; // 40px
-$largest-heading: 5rem; // 80px
+$smallest-font: 0.688rem; // 11px
+$small-font: 0.75rem; // 12px
+$medium-font: 0.875rem; // 14px
+$slightly-large-font: 1.5rem; // 24px
+$large-font: 2.5rem; // 40px
+$largest-font: 5rem; // 80px
 
 // LETTER SPACING
 $regular-spacing: 0.06rem; // 1px
 $medium-spacing: 0.1rem; // 1.6px
-$wide-spacing: 0.163rem; // 3.2px
-
+$wide-spacing: 0.163rem; // 2.6px
+$negative-spacing: -0.1rem; // -1.5px
 // LINE HEIGHTS
-$regular-line-height: 1.5rem; // 24px
+$regular-line: 1.5rem; // 24px
 $high-line: 3.26rem; // 52px
 $highest-line: 6.44rem; // 103px
 

@@ -1,1 +1,63 @@
-/* You can add global styles to this file, and also import other style files *//*# sourceMappingURL=styles.css.map */
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100;200;400;700&family=Inter:wght@400;800&family=League+Spartan:wght@100&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #070724;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  color: #FFFFFF;
+}
+
+h1,
+h2 {
+  font-family: "Antonio", sans-serif;
+  font-weight: 400;
+}
+
+h3,
+h4 {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  line-height: 1.5rem;
+}
+
+p,
+h4 {
+  font-family: "League Spartan", sans-serif;
+  color: #FFFFFF;
+}
+
+h1 {
+  font-size: 5rem;
+  line-height: 6.44rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 3.26rem;
+  letter-spacing: -0.1rem;
+}
+
+h3 {
+  font-size: 0.75rem;
+  letter-spacing: 0.163rem;
+}
+
+h4 {
+  font-size: 0.688rem;
+  letter-spacing: 0.06rem;
+}/*# sourceMappingURL=styles.css.map */
