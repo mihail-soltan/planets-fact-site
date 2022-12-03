@@ -1,1 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
+@import "sass/config";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $dark-blue;
+  font-family: $spartan;
+  font-weight: $regular;
+  font-size: $medium-font;
+  line-height: $regular-line;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  color: $base-white;
+}
+
+h1,
+h2 {
+  font-family: $antonio;
+  font-weight: $regular;
+}
+
+h3,
+h4 {
+  font-family: $spartan;
+  font-weight: $bold;
+  line-height: $regular-line;
+}
+
+p,
+h4 {
+  font-family: $spartan;
+  color: $base-white;
+}
+
+h1 {
+  font-size: $largest-font;
+  line-height: $highest-line;
+}
+
+h2 {
+  font-size: $large-font;
+  line-height: $high-line;
+  letter-spacing: $negative-spacing;
+}
+
+h3 {
+  font-size: $small-font;
+  letter-spacing: $wide-spacing;
+}
+
+h4 {
+  font-size: $smallest-font;
+  letter-spacing: $regular-spacing;
+}
