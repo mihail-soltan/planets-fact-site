@@ -1,7 +1,7 @@
 <nav class="nav">
   <a routerLink="/" routerLinkActive="active" class="logo">THE PLANETS</a>
   <div class="mobile-nav">
-    <input class="checkbox" type="checkbox" />
+    <input class="checkbox" type="checkbox" #menuBtn />
     <div class="hamburger-lines">
       <span class="line line1"></span>
       <span class="line line2"></span>
@@ -10,25 +10,22 @@
     <ul class="menu swing-in-top-bck">
       <li *ngFor="let route of routes; let i = index">
         <div class="nav-planet">
-          <div class="bullet bullet-{{route | lowercase }}"></div>
-          <button
-            class="nav-item"
-            (click)="onPlanetClick(route)"
-          >
-            {{ route | uppercase }}
-          </button>
+          <div class="nav-planet-name">
+            <div class="bullet bullet-{{ route | lowercase }}"></div>
+            <button class="nav-item" (click)="onPlanetClick(route)">
+              {{ route | uppercase }}
+            </button>
+          </div>
+          <p> > </p>
         </div>
-        <p> > </p>
+        <hr class="line" />
       </li>
     </ul>
   </div>
   <ul class="desktop-menu">
     <li *ngFor="let route of routes">
-      <button
-        class="nav-item"
-        (click)="onPlanetClick(route)"
-      >
-        {{ route }}
+      <button class="desktop-nav-item" (click)="onPlanetClick(route)">
+        {{ route | uppercase }}
       </button>
     </li>
   </ul>

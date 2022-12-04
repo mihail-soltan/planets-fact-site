@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Planet } from 'src/app/interfaces/planet';
 import { DataService } from 'src/app/services/data.service';
 import { Router } from '@angular/router';
@@ -10,7 +10,8 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
   planets: Planet[] = [];
-
+  
+  @ViewChild('menuBtn') menuBtn: any; 
   constructor(private dataService: DataService, private router: Router) {}
   routes: string[] = [
     'Mercury',
@@ -30,28 +31,29 @@ export class NavbarComponent implements OnInit {
 
   onPlanetClick(planet: any) {
     this.router.navigate([`/planets/${planet}`]);
+    this.menuBtn.nativeElement.checked = false;
   }
 
-  getPlanetColor(planet: string) {
-    switch (planet) {
-      case 'Mercury':
-        return '#DEF4FC';
-      case 'Venus':
-        return '#F7CC7F';
-      case 'Earth':
-        return '#545BFE';
-      case 'Mars':
-        return '#FF6A45';
-      case 'Jupiter':
-        return '#ECAD7A';
-      case 'Saturn':
-        return '#FCCB6B';
-      case 'Uranus':
-        return '#65F0D5';
-      case 'Neptune':
-        return '#497EFA';
-      default:
-        return '#DEF4FC';
-    }
-  }
+  // getPlanetColor(planet: string) {
+  //   switch (planet) {
+  //     case 'Mercury':
+  //       return '#DEF4FC';
+  //     case 'Venus':
+  //       return '#F7CC7F';
+  //     case 'Earth':
+  //       return '#545BFE';
+  //     case 'Mars':
+  //       return '#FF6A45';
+  //     case 'Jupiter':
+  //       return '#ECAD7A';
+  //     case 'Saturn':
+  //       return '#FCCB6B';
+  //     case 'Uranus':
+  //       return '#65F0D5';
+  //     case 'Neptune':
+  //       return '#497EFA';
+  //     default:
+  //       return '#DEF4FC';
+  //   }
+  // }
 }

@@ -5,7 +5,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  // padding: 1rem;
+  border-bottom: 1px solid $light-grey;
   .logo {
     font-size: $slightly-large-font;
     font-family: $antonio;
@@ -28,8 +29,19 @@
 
   &-planet {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
+    align-self: flex-start;
+    margin-left: 0.75rem;
+    width: 90%;
+
+    &-name {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      align-self: flex-start;
+      margin-left: 1rem;
+    }
   }
 
   .bullet {
@@ -63,7 +75,6 @@
       background-color: $neptune-bullet;
     }
   }
-
 }
 
 .mobile-nav {
@@ -80,6 +91,7 @@
 .desktop-menu > li {
   margin: 0 1rem;
   overflow: hidden;
+  color: $base-white;
 }
 
 .checkbox {
@@ -101,7 +113,7 @@
   position: absolute;
   top: 1rem;
   right: 1rem;
-  z-index: 2;
+  // z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -142,10 +154,23 @@
   transform: translateY(0);
 }
 
+.desktop-nav-item {
+  all: unset;
+  cursor: pointer;
+  font-size: $medium-font;
+  font-family: $spartan;
+  font-weight: $bold;
+  margin: 0.5rem;
+}
+
 @media (max-width: 700px) {
+  .nav {
+    padding: 1rem;
+  }
   .mobile-nav {
     display: block;
   }
+
   .desktop-menu {
     display: none;
   }
@@ -160,29 +185,33 @@
     justify-content: space-evenly;
     align-items: center;
     height: 100%;
+    background-color: $dark-blue;
   }
   .menu > li {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     margin: 0;
     padding: 0.5em 0;
     width: 100%;
     color: white;
-    align-items: flex-start;
+    align-items: center;
+
     p {
       font-size: $slightly-large-font;
       font-family: $spartan;
       font-weight: $bold;
       align-self: center;
       opacity: 0.5;
-      margin-right: 1rem;
       cursor: pointer;
     }
   }
-  .menu > li:not(:last-child) {
-    border-bottom: 1px solid #444;
+
+  .menu > li .line {
+    width: 90%;
+    border: 1px solid $base-white;
+    opacity: 0.5;
   }
-  
 }
 
 .swing-in-top-bck {
@@ -221,5 +250,42 @@
     -webkit-transform-origin: top;
     transform-origin: top;
     opacity: 1;
+  }
+}
+
+@media(min-width: 700px) and (max-width: 1080px) {
+  .nav {
+    flex-direction: column;
+  }
+
+  .desktop-menu {
+    width: 100%;
+    justify-content: space-around;
+  }
+  .desktop-menu > li {
+    margin: 0;
+  }
+
+  .desktop-nav-item {
+    font-size: $medium-font;
+  }
+
+  .logo {
+    margin: 2rem 0;
+  }
+}
+
+@media(min-width:1080px) {
+  .desktop-menu > li {
+    padding: 1rem 0;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+      border-top: 0.25rem solid $light-blue;
+      padding-top: 0.75rem;
+    }
+  }
+  .nav {
+    padding: 0;
   }
 }
