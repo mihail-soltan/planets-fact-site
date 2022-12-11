@@ -1,2 +1,43 @@
-<h2>{{currentPlanet?.name}}</h2>
-<p>{{currentPlanet?.overview?.content}}</p>
+<div class="info-tabs">
+  <input
+    class="tab"
+    type="radio"
+    (change)="getValue($event)"
+    name="info"
+    value="overview"
+    id="overview"
+    [checked]="true"
+  />
+  <label class="info-label {{currentPlanet?.name | lowercase }}-label" for="overview"> OVERVIEW </label>
+  <input
+    class="tab"
+    type="radio"
+    (change)="getValue($event)"
+    name="info"
+    value="structure"
+    id="structure"
+  />
+  <label class="info-label {{currentPlanet?.name | lowercase }}-label" for="structure">STRUCTURE </label>
+  <input
+    class="tab"
+    type="radio"
+    (change)="getValue($event)"
+    name="info"
+    value="surface"
+    id="surface"
+  />
+  <label class="info-label {{currentPlanet?.name | lowercase }}-label" for="surface"> SURFACE </label>
+</div>
+
+
+<div *ngIf="activeTab === 'overview'" class="overview">
+    <h2>{{ currentPlanet?.name }}</h2>
+    <p>{{ currentPlanet?.overview?.content }}</p>
+    <p> Source: <a href="{{ currentPlanet?.overview?.source }}" target="_blank">Wikipedia</a> </p>
+</div>
+<h2 *ngIf="activeTab === 'structure'">STRUCTURE</h2>
+<h2 *ngIf="activeTab === 'surface'">SURFACE</h2>
+<p>Rotation Time: {{currentPlanet?.rotation }} </p>
+<p>Revolution Time: {{currentPlanet?.revolution}}</p>
+<p>Radius: {{currentPlanet?.radius}}</p>
+<p>Average Temp: {{currentPlanet?.temperature}}</p>

@@ -11,6 +11,7 @@ import { DataService } from 'src/app/services/data.service';
 export class PlanetComponent implements OnInit {
   planetName: string = '';
   currentPlanet?: Planet;
+  activeTab: string = 'overview';
 
   constructor(route: ActivatedRoute, private dataService: DataService) {
     route.params.subscribe((params) => {
@@ -26,5 +27,10 @@ export class PlanetComponent implements OnInit {
 
   getPlanet(name: string) {
    this.currentPlanet = this.dataService.getPlanet(name)
+  }
+
+  getValue(e: any) {
+    this.activeTab = e.target.value;
+    console.log(this.activeTab);
   }
 }

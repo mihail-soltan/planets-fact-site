@@ -258,8 +258,36 @@
     align-items: center;
     justify-content: center;
   }
-  .desktop-menu > li:hover {
+  .desktop-menu > li.mercury-btn:hover {
     border-top: 0.25rem solid #419EBB;
+    padding-top: 0.75rem;
+  }
+  .desktop-menu > li.venus-btn:hover {
+    border-top: 0.25rem solid #EDA249;
+    padding-top: 0.75rem;
+  }
+  .desktop-menu > li.earth-btn:hover {
+    border-top: 0.25rem solid #6D2ED5;
+    padding-top: 0.75rem;
+  }
+  .desktop-menu > li.mars-btn:hover {
+    border-top: 0.25rem solid #D14C32;
+    padding-top: 0.75rem;
+  }
+  .desktop-menu > li.jupiter-btn:hover {
+    border-top: 0.25rem solid #D83A34;
+    padding-top: 0.75rem;
+  }
+  .desktop-menu > li.saturn-btn:hover {
+    border-top: 0.25rem solid #CD5120;
+    padding-top: 0.75rem;
+  }
+  .desktop-menu > li.uranus-btn:hover {
+    border-top: 0.25rem solid #1EC1A2;
+    padding-top: 0.75rem;
+  }
+  .desktop-menu > li.neptune-btn:hover {
+    border-top: 0.25rem solid #2d68f0;
     padding-top: 0.75rem;
   }
   .nav {
