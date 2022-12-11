@@ -280,10 +280,39 @@
     padding: 1rem 0;
     align-items: center;
     justify-content: center;
-    &:hover {
-      border-top: 0.25rem solid $light-blue;
-      padding-top: 0.75rem;
+    &.mercury-btn:hover{ 
+        border-top: 0.25rem solid $light-blue;
+        padding-top: 0.75rem;
     }
+    &.venus-btn:hover{ 
+        border-top: 0.25rem solid $light-orange;
+        padding-top: 0.75rem;
+    }
+    &.earth-btn:hover{ 
+        border-top: 0.25rem solid $light-purple;
+        padding-top: 0.75rem;
+    }
+    &.mars-btn:hover{ 
+        border-top: 0.25rem solid $light-red;
+        padding-top: 0.75rem;
+    }
+    &.jupiter-btn:hover{ 
+        border-top: 0.25rem solid $dark-red;
+        padding-top: 0.75rem;
+    }
+    &.saturn-btn:hover{ 
+        border-top: 0.25rem solid $dark-orange;
+        padding-top: 0.75rem;
+    }
+    &.uranus-btn:hover{ 
+        border-top: 0.25rem solid $light-blueish-green2;
+        padding-top: 0.75rem;
+    }
+    &.neptune-btn:hover{ 
+        border-top: 0.25rem solid $darkish-blue;
+        padding-top: 0.75rem;
+    }
+    
   }
   .nav {
     padding: 0;

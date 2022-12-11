@@ -1,1 +1,46 @@
-/*# sourceMappingURL=planet.component.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100;200;400;700&family=Inter:wght@400;800&family=League+Spartan:wght@100&display=swap");
+.info-tabs {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 0.01rem solid #838391;
+}
+.info-tabs .tab {
+  display: none;
+}
+.info-tabs .tab:checked + label {
+  color: #FFFFFF;
+  padding-bottom: 1rem;
+}
+.info-tabs .tab:checked + .mercury-label {
+  border-bottom: 0.25rem solid #419EBB;
+}
+.info-tabs .tab:checked + .venus-label {
+  border-bottom: 0.25rem solid #EDA249;
+}
+.info-tabs .tab:checked + .earth-label {
+  border-bottom: 0.25rem solid #6D2ED5;
+}
+.info-tabs .tab:checked + .mars-label {
+  border-bottom: 0.25rem solid #D14C32;
+}
+.info-tabs .tab:checked + .jupiter-label {
+  border-bottom: 0.25rem solid #D83A34;
+}
+.info-tabs .tab:checked + .saturn-label {
+  border-bottom: 0.25rem solid #CD5120;
+}
+.info-tabs .tab:checked + .uranus-label {
+  border-bottom: 0.25rem solid #1EC1A2;
+}
+.info-tabs .tab:checked + .neptune-label {
+  border-bottom: 0.25rem solid #2d68f0;
+}
+.info-tabs .info-label {
+  font-size: 0.688rem;
+  font-family: "League Spartan", sans-serif;
+  cursor: pointer;
+  font-weight: 700;
+  color: #838391;
+  padding: 1.25rem;
+}/*# sourceMappingURL=planet.component.css.map */

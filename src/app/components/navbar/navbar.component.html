@@ -23,7 +23,7 @@
     </ul>
   </div>
   <ul class="desktop-menu">
-    <li *ngFor="let route of routes">
+    <li *ngFor="let route of routes" class="{{ route | lowercase }}-btn">
       <button class="desktop-nav-item" (click)="onPlanetClick(route)">
         {{ route | uppercase }}
       </button>

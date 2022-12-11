@@ -1,0 +1,47 @@
+@import '../../../sass/config';
+
+.info-tabs {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 0.01rem solid $light-grey;
+    .tab {
+        display: none;
+        &:checked + label {
+            color: $base-white;
+            padding-bottom: 1rem;
+        }
+        &:checked + .mercury-label {
+            border-bottom: 0.25rem solid $light-blue;
+        }
+        &:checked + .venus-label {
+            border-bottom: 0.25rem solid $light-orange;
+        }
+        &:checked + .earth-label {
+            border-bottom: 0.25rem solid $light-purple;
+        }
+        &:checked + .mars-label {
+            border-bottom: 0.25rem solid $light-red;
+        }
+        &:checked + .jupiter-label {
+            border-bottom: 0.25rem solid $dark-red;
+        }
+        &:checked + .saturn-label {
+            border-bottom: 0.25rem solid $dark-orange;
+        }
+        &:checked + .uranus-label {
+            border-bottom: 0.25rem solid $light-blueish-green2;
+        }
+        &:checked + .neptune-label {
+            border-bottom: 0.25rem solid $darkish-blue;
+        }
+    }
+    .info-label {
+        font-size: $smallest-font;
+        font-family: $spartan;
+        cursor: pointer;
+        font-weight: $bold;
+        color: $light-grey;
+        padding: 1.25rem;
+    }
+}
