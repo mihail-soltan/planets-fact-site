@@ -1,47 +1,113 @@
-@import '../../../sass/config';
+@import "../../../sass/config";
 
 .info-tabs {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-bottom: 0.01rem solid $light-grey;
-    .tab {
-        display: none;
-        &:checked + label {
-            color: $base-white;
-            padding-bottom: 1rem;
-        }
-        &:checked + .mercury-label {
-            border-bottom: 0.25rem solid $light-blue;
-        }
-        &:checked + .venus-label {
-            border-bottom: 0.25rem solid $light-orange;
-        }
-        &:checked + .earth-label {
-            border-bottom: 0.25rem solid $light-purple;
-        }
-        &:checked + .mars-label {
-            border-bottom: 0.25rem solid $light-red;
-        }
-        &:checked + .jupiter-label {
-            border-bottom: 0.25rem solid $dark-red;
-        }
-        &:checked + .saturn-label {
-            border-bottom: 0.25rem solid $dark-orange;
-        }
-        &:checked + .uranus-label {
-            border-bottom: 0.25rem solid $light-blueish-green2;
-        }
-        &:checked + .neptune-label {
-            border-bottom: 0.25rem solid $darkish-blue;
-        }
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 0.01rem solid $light-grey;
+  .tab {
+    display: none;
+    &:checked + label {
+      color: $base-white;
+      padding-bottom: 1rem;
     }
-    .info-label {
-        font-size: $smallest-font;
-        font-family: $spartan;
-        cursor: pointer;
-        font-weight: $bold;
+    &:checked + .mercury-label {
+      border-bottom: 0.25rem solid $light-blue;
+    }
+    &:checked + .venus-label {
+      border-bottom: 0.25rem solid $light-orange;
+    }
+    &:checked + .earth-label {
+      border-bottom: 0.25rem solid $light-purple;
+    }
+    &:checked + .mars-label {
+      border-bottom: 0.25rem solid $light-red;
+    }
+    &:checked + .jupiter-label {
+      border-bottom: 0.25rem solid $dark-red;
+    }
+    &:checked + .saturn-label {
+      border-bottom: 0.25rem solid $dark-orange;
+    }
+    &:checked + .uranus-label {
+      border-bottom: 0.25rem solid $light-blueish-green2;
+    }
+    &:checked + .neptune-label {
+      border-bottom: 0.25rem solid $darkish-blue;
+    }
+  }
+  .info-label {
+    font-size: $small-font;
+    font-family: $spartan;
+    cursor: pointer;
+    font-weight: $bold;
+    color: $light-grey;
+    padding: 1.25rem;
+    letter-spacing: $medium-spacing;
+  }
+}
+
+.info-source {
+    color: $light-grey;
+    cursor: pointer;
+    a {
         color: $light-grey;
-        padding: 1.25rem;
+        &:hover {
+            color: $base-white;
+        }
     }
+}
+.general-data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin: 0.5rem 1rem ;
+    width: 80vw;
+    border: 0.01rem solid $light-grey;
+}
+
+@media(max-width: 700px) {
+  .planet {
+    &-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+      &-text {
+      font-size: $medium-font;
+      line-height: $regular-line;
+        text-align: center;
+        padding: 0 1rem;
+    }
+    &-image {
+        margin: 3rem 0;
+        &.mercury{
+            width: 30%;
+        }
+        &.venus{
+            width: 40%;
+        }
+        &.earth{
+            width: 45%;
+        }
+        &.mars{
+            width: 35%;
+        }
+        &.jupiter{
+            width: 70%;
+        }
+        &.saturn{
+            width: 70%;
+        }
+        &.uranus{
+            width: 65%;
+        }
+        &.neptune{
+            width: 65%;
+        }
+    }
+  }
+
 }
