@@ -46,36 +46,44 @@
 <!-- ================================================================================== -->
 <div class="planet-container">
   <img
+    *ngIf="activeTab === 'overview'"
     class="planet-image {{ currentPlanet?.name | lowercase }}"
     src="/../assets/{{ currentPlanet?.name | lowercase }}.png"
     [alt]="currentPlanet?.name"
   />
+  <img
+    class="planet-image {{currentPlanet?.name | lowercase }}"
+    *ngIf="activeTab === 'structure'"
+    src="/../assets/structure/{{ currentPlanet?.name | lowercase }}_structure.png"
+  />
   <h2>{{ currentPlanet?.name | uppercase }}</h2>
   <p class="planet-text">{{ currentPlanet?.overview?.content }}</p>
-  <p class="info-source">
-    Source:
-    <a href="{{ currentPlanet?.overview?.source }}" target="_blank"
-      >Wikipedia</a
-    >
-    <img src="/../assets/url_icon.png"/>
-  </p>
+  <div class="info-source">
+    <p>
+      Source:
+      <a href="{{ currentPlanet?.overview?.source }}" target="_blank"
+        >Wikipedia</a
+      >
+    </p>
+    <img src="/../assets/url_icon.png" />
+  </div>
   <div *ngIf="activeTab === 'overview'" class="overview"></div>
   <h2 *ngIf="activeTab === 'structure'">STRUCTURE</h2>
   <h2 *ngIf="activeTab === 'surface'">SURFACE</h2>
   <div class="general-data">
-
-    <h4>ROTATION TIME: </h4> <h3>{{ currentPlanet?.rotation }}</h3>
+    <h4>ROTATION TIME:</h4>
+    <h3>{{ currentPlanet?.rotation }}</h3>
   </div>
   <div class="general-data">
-
-    <h4>REVOLUTION TIME: </h4><h3>{{ currentPlanet?.revolution }}</h3>
+    <h4>REVOLUTION TIME:</h4>
+    <h3>{{ currentPlanet?.revolution }}</h3>
   </div>
   <div class="general-data">
-
-    <h4>RADIUS: </h4><h3>{{ currentPlanet?.radius }}</h3>
+    <h4>RADIUS:</h4>
+    <h3>{{ currentPlanet?.radius }}</h3>
   </div>
   <div class="general-data">
-
-    <h4>AVERAGE TEMP: </h4><h3>{{ currentPlanet?.temperature }}</h3>
+    <h4>AVERAGE TEMP:</h4>
+    <h3>{{ currentPlanet?.temperature }}</h3>
   </div>
 </div>
