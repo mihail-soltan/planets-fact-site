@@ -10,8 +10,8 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
   planets: Planet[] = [];
-  
-  @ViewChild('menuBtn') menuBtn: any; 
+
+  @ViewChild('menuBtn') menuBtn: any;
   constructor(private dataService: DataService, private router: Router) {}
   routes: string[] = [
     'Mercury',
@@ -33,27 +33,4 @@ export class NavbarComponent implements OnInit {
     this.router.navigate([`/planets/${planet}`]);
     this.menuBtn.nativeElement.checked = false;
   }
-
-  // getPlanetColor(planet: string) {
-  //   switch (planet) {
-  //     case 'Mercury':
-  //       return '#DEF4FC';
-  //     case 'Venus':
-  //       return '#F7CC7F';
-  //     case 'Earth':
-  //       return '#545BFE';
-  //     case 'Mars':
-  //       return '#FF6A45';
-  //     case 'Jupiter':
-  //       return '#ECAD7A';
-  //     case 'Saturn':
-  //       return '#FCCB6B';
-  //     case 'Uranus':
-  //       return '#65F0D5';
-  //     case 'Neptune':
-  //       return '#497EFA';
-  //     default:
-  //       return '#DEF4FC';
-  //   }
-  // }
 }

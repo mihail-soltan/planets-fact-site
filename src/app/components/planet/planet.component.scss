@@ -72,6 +72,13 @@
     margin: 0.5rem 1rem ;
     width: 80vw;
     border: 0.01rem solid $light-grey;
+
+    .stats {
+      font-family: $antonio;
+      font-weight: $regular;
+      color: $base-white;
+      font-size: $large-font !important;
+    }
 }
 
 @media(max-width: 700px) {
@@ -81,6 +88,14 @@
         flex-direction: column;
         align-items: center;
     }
+    &-name {
+        font-size: $large-font;
+        font-family: $antonio;
+        font-weight: $regular;
+        letter-spacing: $medium-spacing;
+        text-align: center;
+        margin:1rem 0;
+    }
       &-text {
       font-size: $medium-font;
       line-height: $regular-line;
@@ -88,7 +103,7 @@
         padding: 0 1rem;
     }
     &-image {
-        margin: 3rem 0;
+        margin: 5rem 0;
         &.mercury{
             width: 30%;
         }
