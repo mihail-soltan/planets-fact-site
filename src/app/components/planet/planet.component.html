@@ -1,5 +1,5 @@
 <!-- TABS -->
-<div class="info-tabs">
+<div class="phone-tabs">
   <input
     class="tab"
     type="radio"
@@ -7,7 +7,7 @@
     name="info"
     value="overview"
     id="overview"
-    [checked]="true"
+    checked
   />
   <label
     class="info-label {{ currentPlanet?.name | lowercase }}-label"
@@ -45,45 +45,99 @@
 </div>
 <!-- ================================================================================== -->
 <div class="planet-container">
-  <img
-    *ngIf="activeTab === 'overview'"
-    class="planet-image {{ currentPlanet?.name | lowercase }}"
-    src="/../assets/{{ currentPlanet?.name | lowercase }}.png"
-    [alt]="currentPlanet?.name"
-  />
-  <img
-    class="planet-image {{currentPlanet?.name | lowercase }}"
-    *ngIf="activeTab === 'structure'"
-    src="/../assets/structure/{{ currentPlanet?.name | lowercase }}_structure.png"
-  />
-  <h2 class="planet-name">{{ currentPlanet?.name | uppercase }}</h2>
-  <p class="planet-text">{{ currentPlanet?.overview?.content }}</p>
-  <div class="info-source">
-    <p>
-      Source:
-      <a href="{{ currentPlanet?.overview?.source }}" target="_blank"
-        >Wikipedia</a
-      >
-    </p>
-    <img src="/../assets/url_icon.png" />
+  <div class="image-container">
+    <img
+      *ngIf="activeTab === 'overview'"
+      class="planet-image {{ currentPlanet?.name | lowercase }}"
+      src="/../assets/{{ currentPlanet?.name | lowercase }}.png"
+      [alt]="currentPlanet?.name"
+    />
+    <img
+      class="planet-image {{ currentPlanet?.name | lowercase }}"
+      *ngIf="activeTab === 'structure'"
+      src="/../assets/structure/{{
+        currentPlanet?.name | lowercase
+      }}_structure.png"
+    />
   </div>
-  <div *ngIf="activeTab === 'overview'" class="overview"></div>
+  <div class="info-container">
+    <div class="info-text">
+      <h2 class="planet-name">{{ currentPlanet?.name | uppercase }}</h2>
+      <p class="planet-text">{{ currentPlanet?.overview?.content }}</p>
+      <div class="info-source">
+        <p>
+          Source:
+          <a href="{{ currentPlanet?.overview?.source }}" target="_blank"
+            >Wikipedia</a
+          >
+        </p>
+        <img src="/../assets/url_icon.png" />
+      </div>
+    </div>
+    <div class="info-tabs">
+      <input
+        class="tab"
+        type="radio"
+        (change)="getValue($event)"
+        name="info"
+        value="overview"
+        id="overview"
+        checked
+      />
+      <label
+        class="info-label {{ currentPlanet?.name | lowercase }}-label"
+        for="overview"
+      >
+        OVERVIEW
+      </label>
+      <input
+        class="tab"
+        type="radio"
+        (change)="getValue($event)"
+        name="info"
+        value="structure"
+        id="structure"
+      />
+      <label
+        class="info-label {{ currentPlanet?.name | lowercase }}-label"
+        for="structure"
+        >STRUCTURE
+      </label>
+      <input
+        class="tab"
+        type="radio"
+        (change)="getValue($event)"
+        name="info"
+        value="surface"
+        id="surface"
+      />
+      <label
+        class="info-label {{ currentPlanet?.name | lowercase }}-label"
+        for="surface"
+      >
+        SURFACE
+      </label>
+    </div>
+  </div>
+  <!-- <div *ngIf="activeTab === 'overview'" class="overview"></div> -->
   <!-- <h2 *ngIf="activeTab === 'structure'">STRUCTURE</h2> -->
   <!-- <h2 *ngIf="activeTab === 'surface'">SURFACE</h2> -->
-  <div class="general-data">
-    <h4>ROTATION TIME:</h4>
-    <h3 class="planet-stats">{{ currentPlanet?.rotation }}</h3>
-  </div>
-  <div class="general-data">
-    <h4>REVOLUTION TIME:</h4>
-    <h3 class="planet-stats">{{ currentPlanet?.revolution }}</h3>
-  </div>
-  <div class="general-data">
-    <h4>RADIUS:</h4>
-    <h3 class="planet-stats">{{ currentPlanet?.radius }}</h3>
-  </div>
-  <div class="general-data">
-    <h4>AVERAGE TEMP:</h4>
-    <h3 class="planet-stats">{{ currentPlanet?.temperature }}</h3>
+  <div class="data-container">
+    <div class="general-data">
+      <h4>ROTATION TIME:</h4>
+      <h3 class="planet-stats">{{ currentPlanet?.rotation }}</h3>
+    </div>
+    <div class="general-data">
+      <h4>REVOLUTION TIME:</h4>
+      <h3 class="planet-stats">{{ currentPlanet?.revolution }}</h3>
+    </div>
+    <div class="general-data">
+      <h4>RADIUS:</h4>
+      <h3 class="planet-stats">{{ currentPlanet?.radius }}</h3>
+    </div>
+    <div class="general-data">
+      <h4>AVERAGE TEMP:</h4>
+      <h3 class="planet-stats">{{ currentPlanet?.temperature }}</h3>
+    </div>
   </div>
 </div>

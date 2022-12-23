@@ -1,6 +1,6 @@
 @import "../../../sass/config";
 
-.info-tabs {
+.phone-tabs {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -46,7 +46,11 @@
     letter-spacing: $medium-spacing;
   }
 }
-
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .info-source {
     display: flex;
     flex-direction: row;
@@ -80,7 +84,7 @@
       font-size: $large-font !important;
     }
 }
-
+// MEDIA QUERIES FOR PHONE USERS
 @media(max-width: 700px) {
   .planet {
     &-container {
@@ -130,5 +134,54 @@
         }
     }
   }
+  .info-tabs {
+    display: none
+  }
+}
 
+@media(min-width: 700px) and (max-width: 1024px) {
+  .phone-tabs {
+    display: none;
+  }
+  .info{
+    &-container {
+      display: flex;
+      flex-direction: row;
+    }
+    &-text {
+      width: 60%;
+      margin: 1rem;
+    }
+    &-source {
+      justify-content: flex-start;
+    }
+    &-tabs {
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        width: 65%;
+        margin-right: 1rem;
+        .tab {
+          display: none;
+        }
+        .info-label {
+          font-size: $small-font;
+          font-family: $spartan;
+          cursor: pointer;
+          font-weight: $bold;
+          color: $light-grey;
+          padding: 1rem;
+          letter-spacing: $medium-spacing;
+          border: 0.01rem solid $light-grey;
+          margin: 0.5rem;
+        }
+    }
+  }
+  .data-container {
+    display: flex;
+    flex-direction: row;
+    .general-data {
+      flex-direction: column;
+    }
+  }
 }

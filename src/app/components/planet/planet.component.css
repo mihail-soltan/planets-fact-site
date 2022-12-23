@@ -1,42 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100;200;400;700&family=Inter:wght@400;800&family=League+Spartan:wght@100&display=swap");
-.info-tabs {
+.phone-tabs {
   display: flex;
   justify-content: space-around;
   align-items: center;
   border-bottom: 0.01rem solid #838391;
 }
-.info-tabs .tab {
+.phone-tabs .tab {
   display: none;
 }
-.info-tabs .tab:checked + label {
+.phone-tabs .tab:checked + label {
   color: #FFFFFF;
   padding-bottom: 1rem;
 }
-.info-tabs .tab:checked + .mercury-label {
+.phone-tabs .tab:checked + .mercury-label {
   border-bottom: 0.25rem solid #419EBB;
 }
-.info-tabs .tab:checked + .venus-label {
+.phone-tabs .tab:checked + .venus-label {
   border-bottom: 0.25rem solid #EDA249;
 }
-.info-tabs .tab:checked + .earth-label {
+.phone-tabs .tab:checked + .earth-label {
   border-bottom: 0.25rem solid #6D2ED5;
 }
-.info-tabs .tab:checked + .mars-label {
+.phone-tabs .tab:checked + .mars-label {
   border-bottom: 0.25rem solid #D14C32;
 }
-.info-tabs .tab:checked + .jupiter-label {
+.phone-tabs .tab:checked + .jupiter-label {
   border-bottom: 0.25rem solid #D83A34;
 }
-.info-tabs .tab:checked + .saturn-label {
+.phone-tabs .tab:checked + .saturn-label {
   border-bottom: 0.25rem solid #CD5120;
 }
-.info-tabs .tab:checked + .uranus-label {
+.phone-tabs .tab:checked + .uranus-label {
   border-bottom: 0.25rem solid #1EC1A2;
 }
-.info-tabs .tab:checked + .neptune-label {
+.phone-tabs .tab:checked + .neptune-label {
   border-bottom: 0.25rem solid #2d68f0;
 }
-.info-tabs .info-label {
+.phone-tabs .info-label {
   font-size: 0.75rem;
   font-family: "League Spartan", sans-serif;
   cursor: pointer;
@@ -46,12 +46,24 @@
   letter-spacing: 0.1rem;
 }
 
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .info-source {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
   color: #838391;
-  cursor: pointer;
 }
 .info-source a {
   color: #838391;
+  margin: 0 0.25rem;
+  cursor: pointer;
 }
 .info-source a:hover {
   color: #FFFFFF;
@@ -67,12 +79,26 @@
   width: 80vw;
   border: 0.01rem solid #838391;
 }
+.general-data .stats {
+  font-family: "Antonio", sans-serif;
+  font-weight: 400;
+  color: #FFFFFF;
+  font-size: 2.5rem !important;
+}
 
 @media (max-width: 700px) {
   .planet-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  .planet-name {
+    font-size: 2.5rem;
+    font-family: "Antonio", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    margin: 1rem 0;
   }
   .planet-text {
     font-size: 0.875rem;
@@ -81,7 +107,7 @@
     padding: 0 1rem;
   }
   .planet-image {
-    margin: 3rem 0;
+    margin: 5rem 0;
   }
   .planet-image.mercury {
     width: 30%;
@@ -106,5 +132,52 @@
   }
   .planet-image.neptune {
     width: 65%;
+  }
+  .info-tabs {
+    display: none;
+  }
+}
+@media (min-width: 700px) and (max-width: 1024px) {
+  .phone-tabs {
+    display: none;
+  }
+  .info-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .info-text {
+    width: 60%;
+    margin: 1rem;
+  }
+  .info-source {
+    justify-content: flex-start;
+  }
+  .info-tabs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 65%;
+    margin-right: 1rem;
+  }
+  .info-tabs .tab {
+    display: none;
+  }
+  .info-tabs .info-label {
+    font-size: 0.75rem;
+    font-family: "League Spartan", sans-serif;
+    cursor: pointer;
+    font-weight: 700;
+    color: #838391;
+    padding: 1rem;
+    letter-spacing: 0.1rem;
+    border: 0.01rem solid #838391;
+    margin: 0.5rem;
+  }
+  .data-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .data-container .general-data {
+    flex-direction: column;
   }
 }/*# sourceMappingURL=planet.component.css.map */
