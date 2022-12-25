@@ -137,7 +137,34 @@
     display: none;
   }
 }
-@media (min-width: 700px) and (max-width: 1024px) {
+@media (min-width: 700px) {
+  .image-container {
+    height: 50vh;
+  }
+  .planet-image {
+    margin: 5rem 0;
+  }
+  .planet-image.mercury {
+    width: 25%;
+  }
+  .planet-image.venus {
+    width: 35%;
+  }
+  .planet-image.earth {
+    width: 45%;
+  }
+  .planet-image.mars {
+    width: 35%;
+  }
+  .planet-image.jupiter {
+    width: 55%;
+  }
+  .planet-image.saturn {
+    width: 65%;
+  }
+  .planet-image.uranus, .planet-image.neptune {
+    width: 50%;
+  }
   .phone-tabs {
     display: none;
   }
@@ -162,6 +189,34 @@
   .info-tabs .tab {
     display: none;
   }
+  .info-tabs .tab:checked + label {
+    color: #FFFFFF;
+    padding-bottom: 1rem;
+  }
+  .info-tabs .tab:checked + .mercury-label {
+    background-color: #419EBB;
+  }
+  .info-tabs .tab:checked + .venus-label {
+    background-color: #EDA249;
+  }
+  .info-tabs .tab:checked + .earth-label {
+    background-color: #6D2ED5;
+  }
+  .info-tabs .tab:checked + .mars-label {
+    background-color: #D14C32;
+  }
+  .info-tabs .tab:checked + .jupiter-label {
+    background-color: #D83A34;
+  }
+  .info-tabs .tab:checked + .saturn-label {
+    background-color: #CD5120;
+  }
+  .info-tabs .tab:checked + .uranus-label {
+    background-color: #1EC1A2;
+  }
+  .info-tabs .tab:checked + .neptune-label {
+    background-color: #2d68f0;
+  }
   .info-tabs .info-label {
     font-size: 0.75rem;
     font-family: "League Spartan", sans-serif;
@@ -179,5 +234,6 @@
   }
   .data-container .general-data {
     flex-direction: column;
+    justify-content: flex-start;
   }
 }/*# sourceMappingURL=planet.component.css.map */
