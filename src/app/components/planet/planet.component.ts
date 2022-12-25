@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { map, Observable, pairwise, share, startWith } from 'rxjs';
 import { slideInAnimation } from 'src/app/animations';
@@ -14,7 +14,7 @@ import { DataService } from 'src/app/services/data.service';
 export class PlanetComponent implements OnInit {
   planetName: string = '';
   currentPlanet?: Planet;
-  activeTab: string = 'overview';
+  activeTab!: string;
 
   constructor(
     route: ActivatedRoute,
@@ -27,6 +27,7 @@ export class PlanetComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.activeTab = 'overview'
     // this.getPlanet();
   }
 
@@ -38,4 +39,12 @@ export class PlanetComponent implements OnInit {
     this.activeTab = e.target.value;
   }
  
+  updateDesktopTabs() {
+    const overviewDesktopTab = document.getElementById('overview-desktop') as HTMLInputElement | null;
+    const structureDesktopTab = document.getElementById('structure-desktop') as HTMLInputElement | null;
+    const surfaceDesktopTab = document.getElementById('surface-desktop') as HTMLInputElement | null;
+    overviewDesktopTab!.checked = this.activeTab === 'overview';
+    structureDesktopTab!.checked = this.activeTab === 'structure';
+    surfaceDesktopTab!.checked = this.activeTab === 'surface';
+  }
 }

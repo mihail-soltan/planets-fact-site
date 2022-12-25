@@ -3,11 +3,12 @@
   <input
     class="tab"
     type="radio"
-    (change)="getValue($event)"
+    [(ngModel)]="activeTab"
+    (change)="updateDesktopTabs()"
     name="info"
     value="overview"
     id="overview"
-    checked
+    [checked]="true"
   />
   <label
     class="info-label {{ currentPlanet?.name | lowercase }}-label"
@@ -18,8 +19,9 @@
   <input
     class="tab"
     type="radio"
-    (change)="getValue($event)"
     name="info"
+    [(ngModel)]="activeTab"
+    (change)="updateDesktopTabs()"
     value="structure"
     id="structure"
   />
@@ -31,7 +33,8 @@
   <input
     class="tab"
     type="radio"
-    (change)="getValue($event)"
+    [(ngModel)]="activeTab"
+    (change)="updateDesktopTabs()"
     name="info"
     value="surface"
     id="surface"
@@ -75,48 +78,48 @@
       </div>
     </div>
     <div class="info-tabs">
-      <input
-        class="tab"
-        type="radio"
-        (change)="getValue($event)"
-        name="info"
-        value="overview"
-        id="overview"
-        checked
-      />
-      <label
-        class="info-label {{ currentPlanet?.name | lowercase }}-label"
-        for="overview"
-      >
-        OVERVIEW
-      </label>
-      <input
-        class="tab"
-        type="radio"
-        (change)="getValue($event)"
-        name="info"
-        value="structure"
-        id="structure"
-      />
-      <label
-        class="info-label {{ currentPlanet?.name | lowercase }}-label"
-        for="structure"
-        >STRUCTURE
-      </label>
-      <input
-        class="tab"
-        type="radio"
-        (change)="getValue($event)"
-        name="info"
-        value="surface"
-        id="surface"
-      />
-      <label
-        class="info-label {{ currentPlanet?.name | lowercase }}-label"
-        for="surface"
-      >
-        SURFACE
-      </label>
+        <input
+          class="tab"
+          type="radio"
+          (change)="getValue($event)"
+          name="desktop-info"
+          value="overview"
+          [checked]="true"
+          id="overview-desktop"
+        />
+        <label
+          class="info-label {{ currentPlanet?.name | lowercase }}-label"
+          for="overview"
+        >
+          OVERVIEW
+        </label>
+        <input
+          class="tab"
+          type="radio"
+          (change)="getValue($event)"
+          name="desktop-info"
+          value="structure"
+          id="structure-desktop"
+        />
+        <label
+          class="info-label {{ currentPlanet?.name | lowercase }}-label"
+          for="structure"
+          >STRUCTURE
+        </label>
+        <input
+          class="tab"
+          type="radio"
+          (change)="getValue($event)"
+          name="desktop-info"
+          value="surface"
+          id="surface-desktop"
+        />
+        <label
+          class="info-label {{ currentPlanet?.name | lowercase }}-label"
+          for="surface"
+        >
+          SURFACE
+        </label>
     </div>
   </div>
   <!-- <div *ngIf="activeTab === 'overview'" class="overview"></div> -->

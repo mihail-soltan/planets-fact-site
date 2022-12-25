@@ -139,7 +139,7 @@
   }
 }
 
-@media(min-width: 700px) and (max-width: 1024px) {
+@media(min-width: 700px) {
   .phone-tabs {
     display: none;
   }
@@ -163,6 +163,34 @@
         margin-right: 1rem;
         .tab {
           display: none;
+          &:checked + label {
+            color: $base-white;
+            padding-bottom: 1rem;
+          }
+          &:checked + .mercury-label {
+            background-color: $light-blue;
+          }
+          &:checked + .venus-label {
+            background-color: $light-orange;
+          }
+          &:checked + .earth-label {
+            background-color: $light-purple;
+          }
+          &:checked + .mars-label {
+            background-color: $light-red;
+          }
+          &:checked + .jupiter-label {
+            background-color: $dark-red;
+          }
+          &:checked + .saturn-label {
+            background-color: $dark-orange;
+          }
+          &:checked + .uranus-label {
+            background-color: $light-blueish-green2;
+          }
+          &:checked + .neptune-label {
+            background-color: $darkish-blue;
+          }
         }
         .info-label {
           font-size: $small-font;
