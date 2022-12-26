@@ -120,7 +120,10 @@
       &.mars {
         width: 35%;
       }
-      &.jupiter, &.saturn, &.uranus, &.neptune {
+      &.jupiter,
+      &.saturn,
+      &.uranus,
+      &.neptune {
         width: 50%;
       }
     }
@@ -131,11 +134,9 @@
 }
 
 @media (min-width: 700px) {
-  .image-container {
-    // height: 25vh
-  }
   .planet {
-    &-name, &-text {
+    &-name,
+    &-text {
       margin: 1rem 0;
     }
     &-image {
@@ -232,16 +233,16 @@
       letter-spacing: $medium-spacing;
       border: 0.01rem solid $light-grey;
       margin: 0.5rem 0 0.5rem 0;
-      &.overview::before{
-        content: '01';
+      &.overview::before {
+        content: "01";
         opacity: 0.5;
       }
-      &.structure::before{
-        content: '02';
+      &.structure::before {
+        content: "02";
         opacity: 0.5;
       }
-      &.surface::before{
-        content: '03';
+      &.surface::before {
+        content: "03";
         opacity: 0.5;
       }
     }
@@ -257,7 +258,8 @@
       h4 {
         opacity: 0.5;
       }
-      h4, h3 {
+      h4,
+      h3 {
         margin: 0.5rem 0;
       }
     }

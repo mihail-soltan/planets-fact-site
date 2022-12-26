@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { map, Observable, pairwise, share, startWith } from 'rxjs';
 import { slideInAnimation } from 'src/app/animations';
 import { Planet } from 'src/app/interfaces/planet';
 import { DataService } from 'src/app/services/data.service';
@@ -28,7 +27,6 @@ export class PlanetComponent implements OnInit {
 
   ngOnInit(): void {
     this.activeTab = 'overview'
-    // this.getPlanet();
   }
 
   getPlanet(name: string) {
