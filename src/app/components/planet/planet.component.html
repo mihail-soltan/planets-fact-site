@@ -77,54 +77,55 @@
         <img src="/../assets/url_icon.png" />
       </div>
     </div>
+    <!--================================TABLET/DESKTOP TABS===============================-->
     <div class="info-tabs">
-        <input
-          class="tab"
-          type="radio"
-          (change)="getValue($event)"
-          name="desktop-info"
-          value="overview"
-          [checked]="true"
-          id="overview-desktop"
-        />
-        <label
-          class="info-label {{ currentPlanet?.name | lowercase }}-label"
-          for="overview"
-        >
-          OVERVIEW
-        </label>
-        <input
-          class="tab"
-          type="radio"
-          (change)="getValue($event)"
-          name="desktop-info"
-          value="structure"
-          id="structure-desktop"
-        />
-        <label
-          class="info-label {{ currentPlanet?.name | lowercase }}-label"
-          for="structure"
-          >STRUCTURE
-        </label>
-        <input
-          class="tab"
-          type="radio"
-          (change)="getValue($event)"
-          name="desktop-info"
-          value="surface"
-          id="surface-desktop"
-        />
-        <label
-          class="info-label {{ currentPlanet?.name | lowercase }}-label"
-          for="surface"
-        >
-          SURFACE
-        </label>
+      <input
+        class="tab"
+        type="radio"
+        (change)="getValue($event)"
+        name="desktop-info"
+        value="overview"
+        [checked]="true"
+        id="overview-desktop"
+      />
+      <label
+        class="info-label {{ currentPlanet?.name | lowercase }}-label overview"
+        for="overview"
+      >
+        OVERVIEW
+      </label>
+      <input
+        class="tab"
+        type="radio"
+        (change)="getValue($event)"
+        name="desktop-info"
+        value="structure"
+        id="structure-desktop"
+      />
+      <label
+        class="info-label {{ currentPlanet?.name | lowercase }}-label structure"
+        for="structure"
+      >
+        INTERNAL STRUCTURE
+      </label>
+      <input
+        class="tab"
+        type="radio"
+        (change)="getValue($event)"
+        name="desktop-info"
+        value="surface"
+        id="surface-desktop"
+      />
+      <label
+        class="info-label {{ currentPlanet?.name | lowercase }}-label surface"
+        for="surface"
+      >
+        SURFACE GEOLOGY
+      </label>
     </div>
+    <!-- ============================================================================================ -->
   </div>
-  <!-- <div *ngIf="activeTab === 'overview'" class="overview"></div> -->
-  <!-- <h2 *ngIf="activeTab === 'structure'">STRUCTURE</h2> -->
-  <!-- <h2 *ngIf="activeTab === 'surface'">SURFACE</h2> -->
+
   <div class="data-container">
     <div class="general-data">
       <h4>ROTATION TIME:</h4>

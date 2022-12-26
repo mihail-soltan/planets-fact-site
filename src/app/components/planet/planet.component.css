@@ -74,8 +74,8 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  margin: 0.5rem 1rem;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0.25rem;
   width: 80vw;
   border: 0.01rem solid #838391;
 }
@@ -107,7 +107,7 @@
     padding: 0 1rem;
   }
   .planet-image {
-    margin: 5rem 0;
+    margin: 2rem 0;
   }
   .planet-image.mercury {
     width: 30%;
@@ -121,33 +121,56 @@
   .planet-image.mars {
     width: 35%;
   }
-  .planet-image.jupiter {
-    width: 70%;
-  }
-  .planet-image.saturn {
-    width: 70%;
-  }
-  .planet-image.uranus {
-    width: 65%;
-  }
-  .planet-image.neptune {
-    width: 65%;
+  .planet-image.jupiter, .planet-image.saturn, .planet-image.uranus, .planet-image.neptune {
+    width: 50%;
   }
   .info-tabs {
     display: none;
   }
 }
-@media (min-width: 700px) and (max-width: 1024px) {
+@media (min-width: 700px) {
+  .planet-name, .planet-text {
+    margin: 1rem 0;
+  }
+  .planet-image {
+    margin: 2rem 0;
+  }
+  .planet-image.mercury {
+    width: 25%;
+  }
+  .planet-image.venus {
+    width: 35%;
+  }
+  .planet-image.earth {
+    width: 40%;
+  }
+  .planet-image.mars {
+    width: 35%;
+  }
+  .planet-image.jupiter {
+    width: 45%;
+  }
+  .planet-image.saturn {
+    width: 45%;
+  }
+  .planet-image.uranus, .planet-image.neptune {
+    width: 45%;
+  }
   .phone-tabs {
     display: none;
   }
   .info-container {
     display: flex;
     flex-direction: row;
+    height: 30vh;
+    margin: 1rem 0;
   }
   .info-text {
     width: 60%;
     margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .info-source {
     justify-content: flex-start;
@@ -156,13 +179,41 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 65%;
-    margin-right: 1rem;
+    width: 55%;
+    margin-right: 1.25rem;
   }
   .info-tabs .tab {
     display: none;
   }
-  .info-tabs .info-label {
+  .info-tabs .tab:checked + label {
+    color: #FFFFFF;
+    padding-bottom: 1rem;
+  }
+  .info-tabs .tab:checked + .mercury-label {
+    background-color: #419EBB;
+  }
+  .info-tabs .tab:checked + .venus-label {
+    background-color: #EDA249;
+  }
+  .info-tabs .tab:checked + .earth-label {
+    background-color: #6D2ED5;
+  }
+  .info-tabs .tab:checked + .mars-label {
+    background-color: #D14C32;
+  }
+  .info-tabs .tab:checked + .jupiter-label {
+    background-color: #D83A34;
+  }
+  .info-tabs .tab:checked + .saturn-label {
+    background-color: #CD5120;
+  }
+  .info-tabs .tab:checked + .uranus-label {
+    background-color: #1EC1A2;
+  }
+  .info-tabs .tab:checked + .neptune-label {
+    background-color: #2d68f0;
+  }
+  .info-label {
     font-size: 0.75rem;
     font-family: "League Spartan", sans-serif;
     cursor: pointer;
@@ -171,13 +222,35 @@
     padding: 1rem;
     letter-spacing: 0.1rem;
     border: 0.01rem solid #838391;
-    margin: 0.5rem;
+    margin: 0.5rem 0 0.5rem 0;
+  }
+  .info-label.overview::before {
+    content: "01";
+    opacity: 0.5;
+  }
+  .info-label.structure::before {
+    content: "02";
+    opacity: 0.5;
+  }
+  .info-label.surface::before {
+    content: "03";
+    opacity: 0.5;
   }
   .data-container {
     display: flex;
     flex-direction: row;
+    margin: 0 1rem;
   }
   .data-container .general-data {
     flex-direction: column;
+    padding: 0.5rem;
+    align-items: flex-start;
+  }
+  .data-container .general-data h4 {
+    opacity: 0.5;
+  }
+  .data-container .general-data h4,
+.data-container .general-data h3 {
+    margin: 0.5rem 0;
   }
 }/*# sourceMappingURL=planet.component.css.map */

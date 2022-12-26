@@ -247,12 +247,16 @@
   }
   .desktop-nav-item {
     font-size: 0.875rem;
+    margin: 1.5rem 1rem;
   }
   .logo {
-    margin: 2rem 0;
+    margin: 2rem 1.375rem;
   }
 }
 @media (min-width: 1080px) {
+  .logo {
+    margin: 0 2rem;
+  }
   .desktop-menu > li {
     padding: 1rem 0;
     align-items: center;
