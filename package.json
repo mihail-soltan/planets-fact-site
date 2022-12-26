@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build && ncp _redirects dist",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -37,6 +37,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
+    "ncp": "^2.0.0",
     "typescript": "~4.4.3"
   }
 }
