@@ -26,7 +26,6 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     this.planets = this.dataService.getPlanets();
     // this.planets = this.dataService.getPlanets();
-    console.log(this.planets);
   }
 
   onPlanetClick(planet: any) {

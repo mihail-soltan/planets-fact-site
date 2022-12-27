@@ -15,6 +15,7 @@
 }
 .nav ul {
   list-style: none;
+  z-index: 1;
 }
 .nav-item {
   all: unset;
