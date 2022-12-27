@@ -62,6 +62,9 @@
         currentPlanet?.name | lowercase
       }}_structure.png"
     />
+    <img class="planet-image {{currentPlanet?.name | lowercase}}" *ngIf="activeTab === 'surface'" src="../../../assets/surface/{{
+      currentPlanet?.name | lowercase
+    }}_surface.png"/>
   </div>
   <div class="info-container">
     <div class="info-text">
