@@ -268,3 +268,32 @@
     }
   }
 }
+
+@media(min-width: 1080px) {
+  .main-flex {
+    display: flex;
+    flex-direction: row;
+  }
+  .info {
+    &-container {
+      flex-direction: column;
+      height: 100%;
+      margin: 0;
+    }
+    &-text {
+      width: 100%;
+      margin: 0 1.25rem 0 0;
+    }
+  }
+  .planet-image {
+    margin: 0.5rem 0;
+  }
+  .image {
+    &-container {
+      width: 100%;
+      & > * {
+        width: 55%;
+      }
+    }
+  }
+}
