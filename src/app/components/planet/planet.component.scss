@@ -270,6 +270,9 @@
 }
 
 @media(min-width: 1080px) {
+  .planet-container {
+    margin: 0 5rem;
+  }
   .main-flex {
     display: flex;
     flex-direction: row;
@@ -277,12 +280,21 @@
   .info {
     &-container {
       flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
       height: 100%;
-      margin: 0;
+      margin: 0 1.25rem 0 0;
     }
     &-text {
-      width: 100%;
-      margin: 0 1.25rem 0 0;
+      width: 50%;
+      margin: 0 1.75rem 0 0;
+      align-items: center;
+      .planet-name {
+        align-self: flex-start;
+      }
+    }
+    &-tabs {
+      margin: 0;
     }
   }
   .planet-image {
