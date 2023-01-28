@@ -135,6 +135,7 @@
     display: none;
   }
 }
+// MEDIA QUERIES FOR TABLET USERS
 
 @media (min-width: 700px) {
   .planet {
@@ -268,10 +269,15 @@
     }
   }
 }
-
+// MEDIA QUERIES FOR DESKTOP USERS
 @media(min-width: 1080px) {
   .planet-container {
     margin: 0 5rem;
+    justify-content: space-around;
+    .mercury, .mars {
+      width: 40%;
+    }
+
   }
   .main-flex {
     display: flex;
@@ -296,6 +302,9 @@
     &-tabs {
       margin: 0;
     }
+    &-source {
+      align-self: flex-start;
+    }
   }
   .planet-image {
     margin: 0.5rem 0;
@@ -309,3 +318,11 @@
     }
   }
 }
+
+// MEDIA QUERIES FOR PHONES IN LANDSCAPE MODE
+
+@media(min-width: 700px) and (orientation: landscape){
+  .info-container {
+    height: 100%;
+  }
+} 
