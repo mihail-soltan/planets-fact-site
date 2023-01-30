@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 import { Routes, RouterModule, RouteReuseStrategy } from '@angular/router';
 import { PlanetComponent } from './components/planet/planet.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/planets/Earth' },
-  // { path: '', component: HomeComponent },
   {
     path: 'planets',
     data: { animation: 'slideInAnimation' },
@@ -17,6 +17,8 @@ const routes: Routes = [
       },
     ],
   },
+  { path: '**', component: PageNotFoundComponent },
+  // { path: '**', redirectTo: '/404' },
 ];
 
 @NgModule({

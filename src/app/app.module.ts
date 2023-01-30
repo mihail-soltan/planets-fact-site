@@ -8,12 +8,14 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { PlanetComponent } from './components/planet/planet.component';
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     PlanetComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
