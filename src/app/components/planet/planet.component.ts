@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { slideInAnimation } from 'src/app/animations';
 import { Planet } from 'src/app/interfaces/planet';
 import { DataService } from 'src/app/services/data.service';
@@ -17,11 +17,19 @@ export class PlanetComponent implements OnInit {
 
   constructor(
     route: ActivatedRoute,
+    private router: Router,
     private dataService: DataService,
   ) {
     route.params.subscribe((params) => {
       this.planetName = params['id'];
+      console.log(this.planetName)
       this.getPlanet(this.planetName);
+      if(!this.currentPlanet && this.planetName !== 'Pluto') {
+        this.router.navigate(['/404']);
+      }
+      else if(this.planetName === 'Pluto') {
+        this.router.navigate(['/Pluto']);
+      }
     });
   }
 

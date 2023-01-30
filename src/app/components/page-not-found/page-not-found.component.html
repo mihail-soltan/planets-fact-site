@@ -1,0 +1,10 @@
+<div class="pageNotFound">
+  <div *ngIf="route !== 'Pluto'">
+    <h1>404 Error</h1>
+    <h2>Page Not Found</h2>
+  </div>
+  <div class="pageNotFound"  *ngIf="route === 'Pluto'">
+    <h1>404 Error</h1>
+    <h2>Pluto is not a planet</h2>
+  </div>
+</div>
